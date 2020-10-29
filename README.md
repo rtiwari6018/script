@@ -107,20 +107,30 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_
+Ans:-Web-1 10.0.0.5
+     Web-2 10.0.0.6
+     Web-3 10.0.0.7
+
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- _TODO: Specify which Beats you successfully installed_Beats
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+Ans:-Beats are essentially lightweight, purpose-built agents 
+that acquire data and then ,customized beats for any 
+type of data you'd like to send to Elasticsearch. While
+ each beat has its own distinct use, they all solve the common
+ problem . As the name implies,  Winlogbeat can capture event data from any event logs running on your system. from servers and systems.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the <u>install-elk.yml </u>file to <u>the ansible container</u>
+- Update the <u>host</u> file to include...
+- Run the playbook, and navigate to <u> ipaddress:5601/app/kibana</u> to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
@@ -128,3 +138,4 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+curl https://raw.githubusercontent.com/rtiwari6018/script/main/ansible/install-elk.yml > /etc/ansible/install.elk.yml
